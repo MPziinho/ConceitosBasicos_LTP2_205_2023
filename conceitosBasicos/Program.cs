@@ -1,16 +1,22 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.Runtime.InteropServices;
+﻿// EXERCÍCIOS COM VETORES
 
-Console.WriteLine("Hello, World!");
-string nome = "Seu nome";
-Console.WriteLine("Seja bem vindo(a)" + nome);
-string cidade = "Volta Redonda";
-Console.WriteLine($"eu gosto de {cidade}");
+/*
+ * crie um vetor para armazenar as idades de 5 pessoas e ao final imprima
+ * 1) a pessoa mais nova
+ * 2) a pessoa mais velha
+ * 3) a média das idades
+ * 4) todas as idades ímpares
+ * 5) todas as idades pares
+ */
 
+byte[] idades = new byte[5];
+for(int i = 0; i < 5; i++)
+{
+    Console.WriteLine($"Informe a {i+1}ª idade:");
+    idades[i] = byte.Parse(Console.ReadLine());
+}
 
-float altura = 1.83f;
-float peso = 60.5f;
-double alturaN = altura * 000000001;
-Console.WriteLine($"sua altura é {altura}");
-Console.WriteLine($"se voce pudesse ser o homem formiga, teria a altura" {alturaN}nm");
-Console.WriteLine($"o peso informado foi {peso}");
+foreach (int idade in idades)
+{
+    Console.WriteLine(idade);
+}
